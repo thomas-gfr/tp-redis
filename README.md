@@ -34,7 +34,7 @@ Techno utilisé pour le projet :
 ## Description fonctionnelle
 L'application va lister des utilisateurs avec la possibilité d'en ajouter, de modifier et de supprimer un utilisateur.
 
-## Diagrammes ##
+## Diagrammes
 
     - Use Case
 
