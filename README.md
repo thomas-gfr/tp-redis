@@ -38,11 +38,12 @@ L'application va lister des utilisateurs avec la possibilité d'en ajouter, de m
 
     - Use Case
 
-    ![alt text](/diagrammes/USECASE.png)
+    ![USECASE](/diagrammes/USECASE.png)
 
     - Diagramme d'Activité
 
-
+    ![activite](diagrammes/activite.png)
+    
     - Diagramme de Flux de Données
 
 
