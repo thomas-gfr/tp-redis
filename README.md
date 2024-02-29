@@ -37,10 +37,13 @@ L'application va lister des utilisateurs avec la possibilité d'en ajouter, de m
 ## Diagrammes
 
 -Use Case
+
     ![USECASE](https://github.com/thomas-gfr/tp-redis/assets/57356412/5a737658-199a-4aa7-a41a-0f7e0288e026)
 
 - Diagramme d'Activité
+- 
   ![activite (1)](https://github.com/thomas-gfr/tp-redis/assets/57356412/92c181cf-9047-40eb-a8f7-6acad403320d)
     
 - Diagramme de Flux de Données
+
     ![flux](https://github.com/thomas-gfr/tp-redis/assets/57356412/ad8bfa47-4d87-4d83-aa15-bcc345850d54)
