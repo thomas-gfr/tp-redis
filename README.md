@@ -37,6 +37,8 @@ L'application va lister des utilisateurs avec la possibilité d'en ajouter, de m
 ## Diagrammes ##
 
     - Use Case
+    ![activite (1)](https://github.com/thomas-gfr/tp-redis/assets/57356412/e07a6ef1-2a31-4f53-8bfb-2bbe3ef0d14f)
+
 
     ![USECASE](https://github.com/thomas-gfr/tp-redis/assets/57356412/5a737658-199a-4aa7-a41a-0f7e0288e026)
 
