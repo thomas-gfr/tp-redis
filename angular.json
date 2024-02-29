@@ -30,6 +30,9 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -62,10 +65,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "redis-web-app-angular-project:build:production"
+              "buildTarget": "redis-web-app-angular-project:build:production",
+              "proxyConfig": "proxy.conf.json"
             },
             "development": {
-              "buildTarget": "redis-web-app-angular-project:build:development"
+              "buildTarget": "redis-web-app-angular-project:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -90,6 +95,9 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
               "src/styles.scss"
             ],
             "scripts": []

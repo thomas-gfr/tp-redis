@@ -1,0 +1,31 @@
+<p-table [value]="users" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Id</th>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Âge</th>
+            <th>Métier</th>
+            <th>Email</th>
+            <th>Mots de passe</th>
+            <th>Actions</th>
+        </tr>
+    </ng-template> 
+    <ng-template pTemplate="body" let-user>
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.job }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.password |password }}</td>
+            <td class="flex flex-row flex-wrap align-content-center">
+                <p-button class="flex align-items-center justify-content-center w-4rem h-4rem font-bold border-round m-2" icon="pi pi-user-edit" [rounded]="true" severity="info" [outlined]="true" (onClick)="editUser(user)"></p-button>
+                <p-button class="flex align-items-center justify-content-center w-4rem h-4rem font-bold border-round m-2" icon="pi pi-trash" [rounded]="true" severity="danger" [outlined]="true" (onClick)="deleteUser(user)"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+ 
+

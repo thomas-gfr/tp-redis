@@ -25,3 +25,25 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Description technique
+Techno utilisé pour le projet : 
+    - Angular 17 pour le front
+    - Simple script php avec redis pour le back
+
+## Description fonctionnelle
+L'application va lister des utilisateurs avec la possibilité d'en ajouter, de modifier et de supprimer un utilisateur.
+
+## Diagrammes
+
+    - Use Case
+
+    ![alt text](diagrammes/USECASE.png)
+
+    - Diagramme d'Activité
+
+
+    - Diagramme de Flux de Données
+
+
+    - Diagramme de Classe (si l'application est orientée objet)

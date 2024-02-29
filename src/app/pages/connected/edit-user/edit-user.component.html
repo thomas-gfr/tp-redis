@@ -1,0 +1,39 @@
+<div>
+    <form *ngIf="form" [formGroup]="form">
+        <div class="flex flex-column gap-2">
+            <label for="firstName">firstName</label>
+            <input pInputText id="firstName" aria-describedby="username-help" formControlName="firstName" />
+            <small id="firstName-help">Enter your firstName here.</small>
+        </div>
+
+        <div class="flex flex-column gap-2">
+            <label for="lastName">lastName</label>
+            <input pInputText id="lastName" aria-describedby="lastName-help" formControlName="lastName" />
+            <small id="lastName-help">Enter your lastName here.</small>
+        </div>
+
+        <div class="flex flex-column gap-2">
+            <label for="email">email</label>
+            <input pInputText id="email" aria-describedby="email-help" formControlName="email" />
+            <small id="email-help">Enter your email here.</small>
+        </div>
+
+        <div class="flex flex-column gap-2">
+            <label for="age">age</label>
+            <input pInputText id="age" aria-describedby="age-help" formControlName="age" />
+            <small id="age-help">Enter your age here.</small>
+        </div>
+
+        <div class="flex flex-column gap-2">
+            <label for="job">job</label>
+            <input pInputText id="job" aria-describedby="job-help" formControlName="job" />
+            <small id="job-help">Enter your job here.</small>
+        </div>
+
+        <span class="p-buttonset">
+            <p-button pRipple label="Save" icon="pi pi-check" (onClick)="onSave()"></p-button>
+            <p-button pRipple label="Delete" icon="pi pi-trash" ></p-button>
+            <p-button pRipple label="Cancel" icon="pi pi-times"  (onClick)="onCancel()"></p-button>
+        </span>
+    </form>
+</div>
