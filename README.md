@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Install
 Pour lancer le projet il faut :
-- copier la partie serveur dans wamp ou mamp puis modifier la partie redis client avec ses infos
+- copier la partie serveur dans wamp ou mamp puis modifier la partie redis client avec ses infos et créer une base de données appelé 'test-redis' afin d'y jouer le fichier sql se trouvant dans serveur/sql
 - aller dans le dossier client et faire npm i puis ng s, enjoy ! 
 
 Attention, le projet a été réalisé en angular 17 alors il faut node 18.13
