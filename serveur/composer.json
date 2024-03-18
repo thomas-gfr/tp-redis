@@ -1,0 +1,19 @@
+{
+    "name": "thomas/test-redis",
+    "autoload": {
+        "psr-4": {
+            "Thomas\\TestRedis\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "thomas-gfr",
+            "email": "g.thomas.pro806@gmail.com"
+        }
+    ],
+    "require": {
+        "predis/predis": "^2.2",
+        "vlucas/phpdotenv": "^5.6",
+        "ramsey/uuid": "^4.7"
+    }
+}

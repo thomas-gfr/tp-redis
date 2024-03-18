@@ -26,6 +26,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+## Install
+Pour lancer le projet il faut :
+- copier la partie serveur dans wamp ou mamp puis modifier la partie redis client avec ses infos
+- aller dans le dossier client et faire npm i puis ng s, enjoy ! 
+
+Attention, le projet a été réalisé en angular 17 alors il faut node 18.13
+
 ## Description technique
 Techno utilisé pour le projet : 
     - Angular 17 pour le front
