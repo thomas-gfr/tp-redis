@@ -35,7 +35,7 @@ export class UserApiService {
 
     public updateUser(body: IUser): Observable<IUser> {
         environment.httpOptions.params = new HttpParams();
-        return this._http.post<IUser>(environment.BASE_API + '/index.php?modifyUser=true', body, environment.httpOptions);
+        return this._http.put<IUser>(environment.BASE_API + '/index.php?modifyUser=true', body, environment.httpOptions);
     }
 
     public deleteUser(id: number): Observable<void> {

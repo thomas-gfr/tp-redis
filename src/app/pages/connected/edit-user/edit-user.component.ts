@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { UserApiService } from '../../../shared/services/api/user-api.service';
 import { finalize, tap } from 'rxjs';
 import { IUser } from '../../../shared/interfaces/user.model';
@@ -28,6 +28,10 @@ export class EditUserComponent implements OnInit{
 
     public form: UntypedFormGroup;
 
+    public get isCreate(): boolean {
+        return this._activatedRoute.snapshot.data['isCreate']
+    }
+
     constructor(
         private readonly _activatedRoute: ActivatedRoute,
         private readonly _router: Router,
@@ -37,9 +41,13 @@ export class EditUserComponent implements OnInit{
     ) {}
 
     ngOnInit() {
-        this._activatedRoute.params.pipe(
-            tap((params) => this._getUser(params['id']))
-        ).subscribe()
+        if (!this.isCreate) {
+            this._activatedRoute.params.pipe(
+                tap((params) => this._getUser(params['id']))
+            ).subscribe()
+        } else {
+            this._initForm()
+        }
     }
 
     private _initForm(): void {
@@ -50,6 +58,7 @@ export class EditUserComponent implements OnInit{
             id: [this.user?.id || null],
             job: [this.user?.job || null],
             lastName: [this.user?.lastName || null],
+            password: [null],
         })
     }
 
@@ -63,14 +72,27 @@ export class EditUserComponent implements OnInit{
     }
 
     public onSave(): void {
-        console.log(this.form)
         if (this.form.valid) {
-            this._userApiService.updateUser(this.form.value).pipe(
-                finalize(() => this._router.navigate(['/']))
-            ).subscribe()
+            if (this.isCreate) {
+                this._userApiService.createUser(this.form.value).pipe(
+                    finalize(() => this._router.navigate(['/']))
+                ).subscribe()
+
+            } else {
+                this._userApiService.updateUser(this.form.value).pipe(
+                    finalize(() => this._router.navigate(['/']))
+                ).subscribe()
+            }
         }
     }
 
+    public onDelete(): void {
+        this._userApiService.deleteUser(this.user.id).pipe(
+            finalize(() => this._router.navigate(['/']))
+        ).subscribe()
+    }
+
     public onCancel(): void {
+        this._router.navigate(['/'])
     }
 }

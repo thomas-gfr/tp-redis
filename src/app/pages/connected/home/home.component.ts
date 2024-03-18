@@ -45,6 +45,10 @@ export class HomeComponent implements OnInit{
     public deleteUser(user: IUser): void{
 
     }
+
+    public onCreateUser(): void{
+        this._router.navigate(['/create-user'])
+    }
     
 
 }

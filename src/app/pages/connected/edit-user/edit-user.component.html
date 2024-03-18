@@ -30,9 +30,15 @@
             <small id="job-help">Enter your job here.</small>
         </div>
 
+        <div *ngIf="isCreate" class="flex flex-column gap-2">
+            <label for="password">password</label>
+            <input pInputText id="password" aria-describedby="password-help" formControlName="password" />
+            <small id="password-help">Enter your password here.</small>
+        </div>
+
         <span class="p-buttonset">
             <p-button pRipple label="Save" icon="pi pi-check" (onClick)="onSave()"></p-button>
-            <p-button pRipple label="Delete" icon="pi pi-trash" ></p-button>
+            <p-button pRipple label="Delete" icon="pi pi-trash" (onClick)="onDelete()" ></p-button>
             <p-button pRipple label="Cancel" icon="pi pi-times"  (onClick)="onCancel()"></p-button>
         </span>
     </form>
